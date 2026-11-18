@@ -84,6 +84,27 @@ video:focus-visible {
   color: var(--pink);
 }
 
+.header-location {
+  display: flex;
+  min-width: 0;
+  max-width: 300px;
+  flex: 0 1 300px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #f6f8fc;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: background 0.2s;
+}
+
+.header-location:hover {
+  background: #edf1f8;
+}
+
 .header nav {
   display: flex;
   gap: 25px;
@@ -440,10 +461,16 @@ footer small {
   }
 
   .header nav {
-    order: 3;
+    order: 4;
     width: 100%;
     justify-content: space-between;
     gap: 8px;
+  }
+
+  .header-location {
+    order: 3;
+    max-width: none;
+    flex: 1 1 auto;
   }
 
   .header nav a {
@@ -506,7 +533,14 @@ footer small {
     font-size: 13px;
   }
 
+  .header-location {
+    width: 100%;
+    order: 3;
+    flex: 1 0 100%;
+  }
+
   .header nav {
+    order: 4;
     justify-content: flex-start;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
