@@ -1,0 +1,15 @@
+<section class="section alt" id="fotos">
+  <div class="container">
+    <p class="eyebrow dark">GALERIA</p>
+    <h2>Veja cada cantinho</h2>
+    <p class="sub">Fotos reais do nosso espaço e de eventos realizados aqui.</p>
+    <div class="gallery">
+      @for (photo of photos; track photo.src) {
+        <a [href]="photo.src" target="_blank" rel="noopener" [attr.aria-label]="'Ampliar ' + photo.alt">
+          <img [src]="photo.src" [alt]="photo.alt" loading="lazy">
+          <span>{{ photo.label }}</span>
+        </a>
+      }
+    </div>
+  </div>
+</section>

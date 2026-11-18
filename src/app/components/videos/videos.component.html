@@ -1,0 +1,16 @@
+<section class="section container" id="videos">
+  <p class="eyebrow dark">EM MOVIMENTO</p>
+  <h2>Assista aos vídeos do espaço</h2>
+  <p class="sub">Confira os ambientes em vídeo antes de fazer sua reserva.</p>
+  <div class="videos">
+    @for (video of videos; track video) {
+      <div class="video-card">
+        <video controls preload="metadata" playsinline [attr.aria-label]="'Vídeo ' + video + ' do espaço'">
+          <source [src]="'assets/video-' + video + '.mp4'" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+        <p>Conheça o espaço • Vídeo {{ video }}</p>
+      </div>
+    }
+  </div>
+</section>
