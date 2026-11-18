@@ -165,6 +165,7 @@ h1 {
   max-width: 770px;
   margin: 22px 0;
   font-size: clamp(38px, 5.8vw, 76px);
+  font-weight: 700;
   letter-spacing: -2px;
   line-height: 1.08;
 }
