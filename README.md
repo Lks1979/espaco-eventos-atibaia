@@ -34,6 +34,7 @@ Os arquivos prontos para publicação serão gerados em `dist/espaco-eventos-ati
 
 - Cada seção possui um componente próprio em `src/app/components`.
 - As listas da galeria e dos vídeos ficam em seus respectivos componentes.
+- A caixa de sugestões fica em `src/app/components/suggestions` e prepara o envio pelo WhatsApp.
 - `src/app/app.component.html` organiza as seções da página.
 - Os estilos globais ficam em `style.css`.
 - Para substituir fotos ou vídeos, mantenha os nomes dos arquivos dentro de `assets`.

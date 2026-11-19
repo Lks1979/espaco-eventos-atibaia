@@ -1,0 +1,37 @@
+<section class="section suggestions-section" id="sugestoes">
+  <div class="container suggestions">
+    <div>
+      <p class="eyebrow dark">SUA OPINIÃO É BEM-VINDA</p>
+      <h2>Envie uma sugestão</h2>
+      <p class="sub">Conte para nós como podemos melhorar sua experiência no Espaço Atibaia.</p>
+    </div>
+
+    <form class="suggestion-form" #suggestionForm="ngForm" (ngSubmit)="sendSuggestion(suggestionForm)">
+      <label for="suggestion-message">Sua sugestão</label>
+      <textarea
+        id="suggestion-message"
+        name="suggestion"
+        [(ngModel)]="suggestion"
+        #suggestionField="ngModel"
+        required
+        maxlength="1000"
+        rows="5"
+        placeholder="Escreva sua sugestão aqui..."
+        aria-describedby="suggestion-help suggestion-error"
+      ></textarea>
+      <div class="suggestion-meta">
+        <small id="suggestion-help">Até 1.000 caracteres.</small>
+        <small>{{ suggestion.length }}/1000</small>
+      </div>
+
+      @if (suggestionField.invalid && suggestionField.touched) {
+        <p class="suggestion-error" id="suggestion-error">Digite sua sugestão antes de continuar.</p>
+      }
+
+      <button class="btn" type="submit" [disabled]="suggestionForm.invalid">
+        Enviar pelo WhatsApp <span aria-hidden="true">↗</span>
+      </button>
+      <p class="suggestion-note">O WhatsApp abrirá com a mensagem preenchida para você revisar e enviar.</p>
+    </form>
+  </div>
+</section>

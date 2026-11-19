@@ -147,6 +147,17 @@ video:focus-visible {
   font-weight: 700;
 }
 
+.header nav .suggestions-link {
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: #fff0f6;
+  color: var(--pink);
+}
+
+.header nav .suggestions-link:hover {
+  background: #ffe2ed;
+}
+
 .btn {
   display: inline-flex;
   min-height: 48px;
@@ -448,6 +459,77 @@ h2 {
   box-shadow: 0 12px 35px #061b3720;
 }
 
+.suggestions-section {
+  background: #f6f8fc;
+}
+
+.suggestions {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 48px;
+}
+
+.suggestion-form {
+  padding: 28px;
+  border: 1px solid #e5e9f0;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 35px #061b3710;
+}
+
+.suggestion-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.suggestion-form textarea {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  padding: 14px;
+  border: 1px solid #cbd3df;
+  border-radius: 10px;
+  color: var(--navy);
+  font: inherit;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.suggestion-form textarea:focus-visible {
+  outline: 3px solid #ffb7d0;
+  outline-offset: 2px;
+  border-color: var(--pink);
+}
+
+.suggestion-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+  color: #66748a;
+}
+
+.suggestion-error {
+  margin: 10px 0;
+  color: #b42318;
+  font-size: 14px;
+}
+
+.suggestion-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+}
+
+.suggestion-note {
+  margin: 12px 0 0;
+  color: #66748a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 footer {
   padding: 32px 20px;
   background: #061a35;
@@ -462,6 +544,11 @@ footer p:first-child {
 
 footer small {
   color: #b7c4d8;
+}
+
+.back-to-top {
+  gap: 8px;
+  margin-top: 20px;
 }
 
 .whatsapp {
@@ -539,6 +626,11 @@ footer small {
     gap: 32px;
   }
 
+  .suggestions {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .contact img {
     width: min(100%, 440px);
     max-height: 420px;
@@ -598,6 +690,10 @@ footer small {
   .header nav a {
     flex: 0 0 auto;
     padding-inline: 8px;
+  }
+
+  .header nav .suggestions-link {
+    padding-inline: 12px;
   }
 
   .hero {

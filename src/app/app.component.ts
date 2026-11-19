@@ -6,6 +6,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { PricingComponent } from './components/pricing/pricing.component';
+import { SuggestionsComponent } from './components/suggestions/suggestions.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { WhatsappButtonComponent } from './components/whatsapp-button/whatsapp-button.component';
 
@@ -20,6 +21,7 @@ import { WhatsappButtonComponent } from './components/whatsapp-button/whatsapp-b
     VideosComponent,
     PricingComponent,
     ContactComponent,
+    SuggestionsComponent,
     FooterComponent,
     WhatsappButtonComponent
   ],
