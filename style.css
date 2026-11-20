@@ -214,6 +214,49 @@ video:focus-visible {
   width: 100%;
 }
 
+.hero-pricing {
+  display: grid;
+  max-width: 720px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.hero-price,
+.hero-time {
+  display: flex;
+  min-height: 82px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 14px 18px;
+  border: 1px solid #ffffff38;
+  border-radius: 14px;
+  background: #061d39dc;
+  box-shadow: 0 10px 30px #061d3930;
+  backdrop-filter: blur(8px);
+}
+
+.hero-price-featured {
+  border-color: #ff9bc1;
+  background: #ef176c;
+}
+
+.hero-price span,
+.hero-time span {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.hero-price strong,
+.hero-time strong {
+  font-size: clamp(19px, 2.2vw, 26px);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
 .eyebrow {
   color: #ffb7d0;
   font-size: 12px;
@@ -703,6 +746,26 @@ footer small {
 
   .hero-overlay {
     padding-block: 56px;
+  }
+
+  .hero-pricing {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 28px;
+  }
+
+  .hero-time {
+    grid-column: 1 / -1;
+  }
+
+  .hero-price,
+  .hero-time {
+    min-height: 72px;
+    padding-inline: 12px;
+  }
+
+  .hero-price strong,
+  .hero-time strong {
+    font-size: clamp(16px, 5vw, 22px);
   }
 
   h1 {
